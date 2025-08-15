@@ -1,26 +1,4 @@
 import { Handler } from "@netlify/functions";
-import express from "express";
-import { config } from "dotenv";
-
-// Load environment variables
-config();
-
-const app = express();
-
-// Add CORS middleware FIRST
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  if (req.method === 'OPTIONS') {
-    res.sendStatus(200);
-  } else {
-    next();
-  }
-});
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
 // Simple in-memory storage for Netlify
 interface Booking {
@@ -48,145 +26,221 @@ let content: ContentItem[] = [
   { id: "3", key: "google_maps_url", title: "Google Maps URL", content: "https://maps.google.com", updatedAt: new Date().toISOString() }
 ];
 
-// Routes
-app.get("/api/bookings", (req, res) => {
-  res.json(bookings);
-});
-
-app.post("/api/bookings", async (req, res) => {
-  const booking: Booking = {
-    id: Date.now().toString(),
-    ...req.body,
-    createdAt: new Date().toISOString()
-  };
-  bookings.push(booking);
-  
-  // Send email notification
-  try {
-    const emailData = {
-      access_key: '9f4058e1-70c7-48b0-ba8d-8d52c5339371',
-      subject: 'New Pilates Booking - Tonelab',
-      from_name: 'Tonelab Pilates System',
-      to: 'collective.tonelab@gmail.com',
-      message: `New booking received!\n\nName: ${booking.firstName} ${booking.lastName}\nEmail: ${booking.email}\nPhone: ${booking.phone}\nBooking ID: ${booking.id}\nDate: ${new Date(booking.createdAt).toLocaleString()}`
-    };
-    
-    const emailResponse = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(emailData)
-    });
-    
-    if (!emailResponse.ok) {
-      console.error('Email sending failed:', await emailResponse.text());
-    }
-  } catch (error) {
-    console.error('Email error:', error);
-  }
-  
-  res.json(booking);
-});
-
-app.delete("/api/bookings/:id", (req, res) => {
-  const index = bookings.findIndex(b => b.id === req.params.id);
-  if (index > -1) {
-    bookings.splice(index, 1);
-    res.json({ success: true });
-  } else {
-    res.status(404).json({ error: "Booking not found" });
-  }
-});
-
-app.get("/api/content/public", (req, res) => {
-  res.json(content);
-});
-
-app.put("/api/content/:id", (req, res) => {
-  const item = content.find(c => c.id === req.params.id);
-  if (item) {
-    item.content = req.body.content;
-    item.updatedAt = new Date().toISOString();
-    res.json(item);
-  } else {
-    res.status(404).json({ error: "Content not found" });
-  }
-});
-
-app.post("/api/admin/login", (req, res) => {
-  if (req.body.password === "tonelab2025") {
-    res.json({ success: true });
-  } else {
-    res.status(401).json({ error: "Invalid password" });
-  }
-});
-
-// File upload endpoints for receipt handling
-app.post("/api/upload/receipt", async (req, res) => {
-  try {
-    // For demo purposes, return a mock file URL
-    // In production, this would integrate with your storage service
-    const mockFileUrl = `https://tonelabs.netlify.app/uploads/receipt-${Date.now()}.jpg`;
-    res.json({ 
-      success: true, 
-      fileUrl: mockFileUrl,
-      message: "Receipt uploaded successfully" 
-    });
-  } catch (error) {
-    console.error('Upload error:', error);
-    res.status(500).json({ error: "Upload failed" });
-  }
-});
-
-app.get("/api/upload/config", (req, res) => {
-  // Return upload configuration for the frontend
-  res.json({
-    maxFileSize: 10 * 1024 * 1024, // 10MB
-    allowedTypes: ['image/jpeg', 'image/png', 'image/jpg'],
-    uploadEndpoint: '/api/upload/receipt'
-  });
-});
-
-// Admin stats endpoint
-app.get("/api/admin/stats", (req, res) => {
-  res.json({
-    totalBookings: bookings.length,
-    recentBookings: bookings.slice(-5),
-    lastBookingDate: bookings.length > 0 ? bookings[bookings.length - 1].createdAt : null
-  });
-});
-
-// Add a catch-all route to help debug routing issues
-app.get('*', (req, res) => {
-  if (req.path.startsWith('/api/')) {
-    res.status(404).json({ 
-      error: 'API endpoint not found', 
-      path: req.path,
-      availableEndpoints: [
-        'GET /api/content/public',
-        'POST /api/bookings',
-        'GET /api/bookings',
-        'DELETE /api/bookings/:id',
-        'PUT /api/content/:id',
-        'POST /api/admin/login',
-        'POST /api/upload/receipt',
-        'GET /api/upload/config',
-        'GET /api/admin/stats'
-      ]
-    });
-  } else {
-    res.status(404).json({ error: 'Not found' });
-  }
-});
+// Add CORS headers to all responses
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+};
 
 export const handler: Handler = async (event, context) => {
   try {
-    const serverless = await import("@netlify/functions");
-    return await serverless.default(app)(event, context);
+    // Create a mock request object for Express
+    const req = {
+      method: event.httpMethod,
+      url: event.path + (event.queryStringParameters ? '?' + new URLSearchParams(event.queryStringParameters).toString() : ''),
+      headers: event.headers,
+      body: event.body ? JSON.parse(event.body) : undefined,
+      params: {},
+      query: event.queryStringParameters || {}
+    };
+
+    const res = {
+      statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
+      body: '',
+      json: function(data: any) {
+        this.body = JSON.stringify(data);
+        return this;
+      },
+      status: function(code: number) {
+        this.statusCode = code;
+        return this;
+      },
+      header: function(key: string, value: string) {
+        this.headers[key] = value;
+        return this;
+      },
+      sendStatus: function(code: number) {
+        this.statusCode = code;
+        this.body = '';
+        return this;
+      }
+    };
+
+    // Handle routes manually for Netlify
+    const path = event.path.replace('/.netlify/functions/api', '') || '/';
+    const method = event.httpMethod;
+
+    // Handle CORS preflight
+    if (method === 'OPTIONS') {
+      return {
+        statusCode: 200,
+        headers: corsHeaders,
+        body: ''
+      };
+    }
+
+    if (method === 'GET' && path === '/api/content/public') {
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(content)
+      };
+    }
+
+    if (method === 'POST' && path === '/api/bookings') {
+      const booking: Booking = {
+        id: Date.now().toString(),
+        ...JSON.parse(event.body || '{}'),
+        createdAt: new Date().toISOString()
+      };
+      bookings.push(booking);
+      
+      // Send email notification
+      try {
+        const emailData = {
+          access_key: '9f4058e1-70c7-48b0-ba8d-8d52c5339371',
+          subject: 'New Pilates Booking - Tonelab',
+          from_name: 'Tonelab Pilates System',
+          to: 'collective.tonelab@gmail.com',
+          message: `New booking received!\n\nName: ${booking.firstName} ${booking.lastName}\nEmail: ${booking.email}\nPhone: ${booking.phone}\nBooking ID: ${booking.id}\nDate: ${new Date(booking.createdAt).toLocaleString()}`
+        };
+        
+        await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(emailData)
+        });
+      } catch (error) {
+        console.error('Email error:', error);
+      }
+      
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(booking)
+      };
+    }
+
+    if (method === 'GET' && path === '/api/bookings') {
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify(bookings)
+      };
+    }
+
+    if (method === 'DELETE' && path.startsWith('/api/bookings/')) {
+      const id = path.split('/').pop();
+      const index = bookings.findIndex(b => b.id === id);
+      if (index > -1) {
+        bookings.splice(index, 1);
+        return {
+          statusCode: 200,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ success: true })
+        };
+      } else {
+        return {
+          statusCode: 404,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ error: "Booking not found" })
+        };
+      }
+    }
+
+    if (method === 'POST' && path === '/api/admin/login') {
+      const body = JSON.parse(event.body || '{}');
+      if (body.password === "tonelab2025") {
+        return {
+          statusCode: 200,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ success: true })
+        };
+      } else {
+        return {
+          statusCode: 401,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ error: "Invalid password" })
+        };
+      }
+    }
+
+    if (method === 'PUT' && path.startsWith('/api/content/')) {
+      const id = path.split('/').pop();
+      const item = content.find(c => c.id === id);
+      if (item) {
+        const body = JSON.parse(event.body || '{}');
+        item.content = body.content;
+        item.updatedAt = new Date().toISOString();
+        return {
+          statusCode: 200,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify(item)
+        };
+      } else {
+        return {
+          statusCode: 404,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ error: "Content not found" })
+        };
+      }
+    }
+
+    if (method === 'GET' && path === '/api/admin/stats') {
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          totalBookings: bookings.length,
+          recentBookings: bookings.slice(-5),
+          lastBookingDate: bookings.length > 0 ? bookings[bookings.length - 1].createdAt : null
+        })
+      };
+    }
+
+    if (method === 'POST' && path === '/api/upload/receipt') {
+      const mockFileUrl = `https://tonelabs.netlify.app/uploads/receipt-${Date.now()}.jpg`;
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          success: true, 
+          fileUrl: mockFileUrl,
+          message: "Receipt uploaded successfully" 
+        })
+      };
+    }
+
+    if (method === 'GET' && path === '/api/upload/config') {
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          maxFileSize: 10 * 1024 * 1024,
+          allowedTypes: ['image/jpeg', 'image/png', 'image/jpg'],
+          uploadEndpoint: '/api/upload/receipt'
+        })
+      };
+    }
+
+    // Default 404
+    return {
+      statusCode: 404,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        error: 'API endpoint not found', 
+        path: path,
+        method: method 
+      })
+    };
+
   } catch (error) {
     console.error('Handler error:', error);
     return {
       statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       body: JSON.stringify({ error: 'Internal server error', details: error.message })
     };
   }

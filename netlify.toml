@@ -1,6 +1,6 @@
 [build]
-  command = "npm install && vite build && node build-functions.js"
-  publish = "dist/public"
+  command = "npm install && vite build"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
