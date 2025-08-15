@@ -1,0 +1,30 @@
+[build]
+  command = "npm install && vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist && esbuild server/netlify.ts --platform=node --packages=external --bundle --format=esm --outdir=dist"
+  publish = "dist/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--production=false"
+
+[functions]
+  directory = "netlify/functions"
+
+# Redirect all routes to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Handle API routes
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Environment variables that need to be set in Netlify dashboard:
+# DATABASE_URL - Your Neon PostgreSQL connection string
+# SENDGRID_API_KEY - Your SendGrid API key
+# DEFAULT_OBJECT_STORAGE_BUCKET_ID - Google Cloud Storage bucket ID
+# PRIVATE_OBJECT_DIR - Private object directory path
+# PUBLIC_OBJECT_SEARCH_PATHS - Public object search paths
+# Service account JSON should be uploaded as environment variable

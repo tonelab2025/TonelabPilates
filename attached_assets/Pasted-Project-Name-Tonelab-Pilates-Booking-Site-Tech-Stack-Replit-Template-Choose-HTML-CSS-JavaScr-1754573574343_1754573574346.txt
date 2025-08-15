@@ -1,0 +1,92 @@
+Project Name: Tonelab Pilates Booking Site
+
+Tech Stack (Replit Template):
+Choose: HTML, CSS, JavaScript (with Node.js Express backend if file upload is needed)
+(Optional: React template if you're comfortable with it)
+
+🔧 Development Prompt (Instructions for Replit AI)
+You are building a modern, mobile-optimized landing and booking site for Tonelab, a fitness collective running offline Pilates events. Use the reference design from https://www.carvehouse.co to match the visual style—clean, minimal, soft fonts, with pastel tones. The original form lives here:
+https://docs.google.com/forms/d/e/1FAIpQLSdjtUBkWFwCGnAcp0w75nrDDTgUTRNsfJ-rkG-BDGaUHoyTfw/viewform
+
+🧩 Features to Implement:
+🟣 Homepage
+Brand name: Tonelab
+
+Hero: “Tune Your Tone with Tonelab 🎉” + image banner (use similar one from Google Form)
+
+Event Summary section:
+
+Title: “Pilates Full Body Sculpt & Burn”
+
+Benefits (checkmarks list as per form)
+
+Date & Time: Sat 20 Sep 2025, 09:00–10:30
+
+Venue: Asoke Sports Club
+
+Fee Info:
+
+Early Bird: 890 THB (before 30 Aug 2025)
+
+At door: 1090 THB
+
+🟢 Payment Section
+Show SCB + Thai QR PromptPay payment image (screenshot)
+
+Label: “Scan to Pay”, amount: ฿890
+
+Optionally include payment ID for PromptPay: 5-6791-0000x-xx-x
+
+🔵 Booking Form
+Fields (all required):
+
+Full Name
+
+Telephone
+
+Email
+
+Checkbox: “The Early Bird fee is due before 30 August 2025”
+
+File Upload: Online receipt / proof of payment (Max 100MB)
+
+Checkbox: “Cancellation Policy: TBC”
+
+Add reCAPTCHA for spam protection (optional)
+
+Backend: simple Express.js or Formspree webhook for now
+
+Form submission confirmation: “Thank you for booking! We’ll contact you soon via email/phone.”
+
+🔴 Footer
+Instagram handle: @tonlab.th
+
+Contact: 090-001-6646 (Coach Gade)
+
+Email: sarkar.soumik@gmail.com
+
+Google Maps link (as button):
+https://maps.app.goo.gl/5Tru3vjNYC87xc1g7?g_st=ipc
+
+✨ Style Guide
+Font: Soft, modern (like Inter, Open Sans)
+
+Color palette: Light pastel shades (lavender, mint, pale pink)
+
+Buttons: Rounded corners, hover animations
+
+Icons: Use emojis or lightweight icons (if you use Font Awesome)
+
+Mobile-first design
+
+🔐 Hosting & Deployment Suggestions
+Keep it hosted on Replit while testing
+
+Move to Netlify or Vercel for final domain: tonelab.fit or tonelab.club
+
+Connect Form submissions to email or Google Sheets using tools like:
+
+Formspree / Getform.io
+
+Google Apps Script backend (if needed)
+

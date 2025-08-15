@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force button text visibility */
+.btn-primary {
+  color: white !important;
+}
+
+button[type="submit"] {
+  color: white !important;
+}
+
+/* Ensure all buttons with bg-deep-purple have white text */
+.bg-deep-purple {
+  color: white !important;
+}
+
+/* Force visibility for all payment text */
+div[style*="color: 'white'"],
+div[style*="color: white"] {
+  color: white !important;
+}
+
+/* Ensure button text is always visible */
+button {
+  color: inherit !important;
+}
+
+button[style*="color: 'white'"],
+button[style*="color: white"] {
+  color: white !important;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 9%);
+  --primary: hsl(0, 0%, 9%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(0, 0%, 96%);
+  --secondary-foreground: hsl(0, 0%, 9%);
+  --muted: hsl(0, 0%, 96%);
+  --muted-foreground: hsl(0, 0%, 45%);
+  --accent: hsl(0, 0%, 96%);
+  --accent-foreground: hsl(0, 0%, 9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 90%);
+  --input: hsl(0, 0%, 90%);
+  --ring: hsl(0, 0%, 9%);
+  --radius: 0.75rem;
+  --lavender: hsl(0, 0%, 20%);
+  --mint: hsl(0, 0%, 30%);
+  --pale-pink: hsl(0, 0%, 40%);
+  --deep-purple: hsl(0, 0%, 9%);
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+.dark {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(0, 0%, 9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 9%);
+  --primary: hsl(0, 0%, 9%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(0, 0%, 96%);
+  --secondary-foreground: hsl(0, 0%, 9%);
+  --muted: hsl(0, 0%, 96%);
+  --muted-foreground: hsl(0, 0%, 45%);
+  --accent: hsl(0, 0%, 96%);
+  --accent-foreground: hsl(0, 0%, 9%);
+  --border: hsl(0, 0%, 90%);
+  --input: hsl(0, 0%, 90%);
+  --ring: hsl(0, 0%, 9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-[var(--font-inter)] antialiased;
+  }
+}
+
+/* Uppy modal customization */
+.uppy-Dashboard--modal .uppy-Dashboard-inner {
+  border-radius: 12px;
+}
+
+.uppy-Dashboard-close {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  right: 12px !important;
+  top: 12px !important;
+  z-index: 1000 !important;
+}
+
+.uppy-Dashboard-close:hover {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+.uppy-Dashboard-close svg {
+  fill: white !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Uppy Dashboard browse files underline */
+.uppy-Dashboard-browse {
+  text-decoration: underline !important;
+  color: #3b82f6 !important;
+}
+
+.uppy-Dashboard-browse:hover {
+  color: #1d4ed8 !important;
+}
+
+@layer utilities {
+  .text-lavender {
+    color: hsl(var(--lavender));
+  }
+  
+  .text-mint {
+    color: hsl(var(--mint));
+  }
+  
+  .text-pale-pink {
+    color: hsl(var(--pale-pink));
+  }
+  
+  .text-deep-purple {
+    color: hsl(var(--deep-purple));
+  }
+  
+  .bg-lavender {
+    background-color: hsl(var(--lavender));
+  }
+  
+  .bg-mint {
+    background-color: hsl(var(--mint));
+  }
+  
+  .bg-pale-pink {
+    background-color: hsl(var(--pale-pink));
+  }
+  
+  .bg-deep-purple {
+    background-color: hsl(var(--deep-purple));
+  }
+  
+  .border-lavender {
+    border-color: hsl(var(--lavender));
+  }
+  
+  .border-mint {
+    border-color: hsl(var(--mint));
+  }
+  
+  .border-pale-pink {
+    border-color: hsl(var(--pale-pink));
+  }
+  
+  .border-deep-purple {
+    border-color: hsl(var(--deep-purple));
+  }
+}

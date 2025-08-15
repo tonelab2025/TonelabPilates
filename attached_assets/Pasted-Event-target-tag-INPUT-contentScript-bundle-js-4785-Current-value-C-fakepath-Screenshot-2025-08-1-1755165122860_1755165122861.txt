@@ -1,0 +1,61 @@
+Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: C:\fakepath\Screenshot 2025-08-14 at 2.16.54 PM.png
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 4343455454
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+Console.js:61 Form submitted with data: {fullName: 'Soumik Sarkar', telephone: '4343455454', email: 'test@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/e0ccd92e-d8af-402b-8243-2f272b573ce6', earlyBirdConfirmed: true, …}
+Console.js:61 Form submitted with data: {fullName: 'Soumik Sarkar', telephone: '4343455454', email: 'test@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/e0ccd92e-d8af-402b-8243-2f272b573ce6', earlyBirdConfirmed: true, …}
+Console.js:61 Submitting booking: {fullName: 'Soumik Sarkar', telephone: '4343455454', email: 'test@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/e0ccd92e-d8af-402b-8243-2f272b573ce6', earlyBirdConfirmed: true, …}
+frame_ant.js:2 Uncaught (in promise) AbortError: The user aborted a request.
+e @ frame_ant.js:2
+s @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+s @ frame_ant.js:2
+window.fetch @ frame_ant.js:2
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.consumeQueue @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+n @ _app-e8e03ea2547d612b.js:13
+setTimeout
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+e.scheduleQueueConsumption @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.try @ _app-e8e03ea2547d612b.js:40
+e.start @ _app-e8e03ea2547d612b.js:40
+t.request @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+e.execute @ _app-e8e03ea2547d612b.js:28
+e.getObservableFromLink @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+s @ _app-e8e03ea2547d612b.js:15
+e.mutate @ _app-e8e03ea2547d612b.js:28
+e.mutate @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:20
+e.wait @ 6211-831f5d80b7c0c59e.js:1
+c @ 4359-d5b72334d0e9e8db.js:1
+(anonymous) @ 4359-d5b72334d0e9e8db.js:1
+n @ _app-e8e03ea2547d612b.js:13Understand this error

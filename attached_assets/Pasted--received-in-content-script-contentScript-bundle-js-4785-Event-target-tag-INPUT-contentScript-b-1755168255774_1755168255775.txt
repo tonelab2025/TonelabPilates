@@ -1,0 +1,266 @@
+ received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 304930493
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 3049304930
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 30493049304
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: test@example.com
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+frame_ant.js:2 Uncaught (in promise) AbortError: The user aborted a request.
+e @ frame_ant.js:2
+s @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+s @ frame_ant.js:2
+window.fetch @ frame_ant.js:2
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.consumeQueue @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+n @ _app-e8e03ea2547d612b.js:13
+setTimeout
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+e.scheduleQueueConsumption @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.try @ _app-e8e03ea2547d612b.js:40
+e.start @ _app-e8e03ea2547d612b.js:40
+t.request @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+e.execute @ _app-e8e03ea2547d612b.js:28
+e.getObservableFromLink @ _app-e8e03ea2547d612b.js:28
+e.getResultsFromLink @ _app-e8e03ea2547d612b.js:28
+v @ _app-e8e03ea2547d612b.js:28
+e.fetchQueryByPolicy @ _app-e8e03ea2547d612b.js:28
+v @ _app-e8e03ea2547d612b.js:28
+e.fetchConcastWithInfo @ _app-e8e03ea2547d612b.js:28
+t.fetch @ _app-e8e03ea2547d612b.js:15
+t.reobserveAsConcast @ _app-e8e03ea2547d612b.js:15
+e.executeQuery @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ main-304de52c5211e2ee.js:1
+n @ main-304de52c5211e2ee.js:1
+u @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ main-304de52c5211e2ee.js:1
+n @ main-304de52c5211e2ee.js:1
+u @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+n @ _app-e8e03ea2547d612b.js:13Understand this error
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: C:\fakepath\Screenshot 2025-08-14 at 3.35.52 PM.png
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+frame_ant.js:2 Uncaught (in promise) AbortError: The user aborted a request.
+e @ frame_ant.js:2
+s @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+s @ frame_ant.js:2
+window.fetch @ frame_ant.js:2
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.consumeQueue @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+n @ _app-e8e03ea2547d612b.js:13
+setTimeout
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+e.scheduleQueueConsumption @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.try @ _app-e8e03ea2547d612b.js:40
+e.start @ _app-e8e03ea2547d612b.js:40
+t.request @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+e.execute @ _app-e8e03ea2547d612b.js:28
+e.getObservableFromLink @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+s @ _app-e8e03ea2547d612b.js:15
+e.mutate @ _app-e8e03ea2547d612b.js:28
+e.mutate @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:20
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ main-304de52c5211e2ee.js:1
+n @ main-304de52c5211e2ee.js:1
+u @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+n @ _app-e8e03ea2547d612b.js:13Understand this error
+Console.js:61 Form submitted with data: {fullName: 'Tone munum', telephone: '30493049304', email: 'test@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/4b54f6ee-3fb5-4020-b8a5-75318f0416d4', earlyBirdConfirmed: true, …}
+Console.js:61 Form submitted with data: {fullName: 'Tone munum', telephone: '30493049304', email: 'test@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/4b54f6ee-3fb5-4020-b8a5-75318f0416d4', earlyBirdConfirmed: true, …}
+Console.js:61 Submitting booking: {fullName: 'Tone munum', telephone: '30493049304', email: 'test@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/4b54f6ee-3fb5-4020-b8a5-75318f0416d4', earlyBirdConfirmed: true, …}
+Console.js:61 Submitting booking: {fullName: 'Tone munum', telephone: '30493049304', email: 'test@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/4b54f6ee-3fb5-4020-b8a5-75318f0416d4', earlyBirdConfirmed: true, …}
+frame_ant.js:2  POST https://ca5b88ea-7ba4-4d2b-88ed-6b6142280646-00-37ld9rpirjx2v.kirk.replit.dev/api/bookings 400 (Bad Request)
+window.fetch @ frame_ant.js:2
+window.fetch @ Network.js:219
+apply @ injected.js:253
+mutationFn @ home.tsx:52
+fn @ @tanstack_react-query.js?v=d9e14256:1189
+run @ @tanstack_react-query.js?v=d9e14256:494
+start @ @tanstack_react-query.js?v=d9e14256:536
+execute @ @tanstack_react-query.js?v=d9e14256:1225
+await in execute
+mutate @ @tanstack_react-query.js?v=d9e14256:2630
+(anonymous) @ @tanstack_react-query.js?v=d9e14256:3295
+onSubmit @ home.tsx:134
+(anonymous) @ chunk-4BFJKWC4.js?v=d9e14256:1465
+await in (anonymous)
+callCallback2 @ chunk-RPCDYKBN.js?v=d9e14256:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=d9e14256:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=d9e14256:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=d9e14256:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=d9e14256:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=d9e14256:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=d9e14256:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=d9e14256:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=d9e14256:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=d9e14256:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=d9e14256:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=d9e14256:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=d9e14256:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=d9e14256:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=d9e14256:5449Understand this error
+Console.js:61 Booking mutation error: Error: This email address has already been used for a booking today. Each email can only book once per day.
+    at Object.mutationFn (home.tsx:62:15)
+Mt.forEach.n.<computed> @ Console.js:61
+onError @ home.tsx:77
+execute @ @tanstack_react-query.js?v=d9e14256:1254
+await in execute
+mutate @ @tanstack_react-query.js?v=d9e14256:2630
+(anonymous) @ @tanstack_react-query.js?v=d9e14256:3295
+onSubmit @ home.tsx:134
+(anonymous) @ chunk-4BFJKWC4.js?v=d9e14256:1465
+await in (anonymous)
+callCallback2 @ chunk-RPCDYKBN.js?v=d9e14256:3674
+invokeGuardedCallbackDev @ chunk-RPCDYKBN.js?v=d9e14256:3699
+invokeGuardedCallback @ chunk-RPCDYKBN.js?v=d9e14256:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-RPCDYKBN.js?v=d9e14256:3736
+executeDispatch @ chunk-RPCDYKBN.js?v=d9e14256:7014
+processDispatchQueueItemsInOrder @ chunk-RPCDYKBN.js?v=d9e14256:7034
+processDispatchQueue @ chunk-RPCDYKBN.js?v=d9e14256:7043
+dispatchEventsForPlugins @ chunk-RPCDYKBN.js?v=d9e14256:7051
+(anonymous) @ chunk-RPCDYKBN.js?v=d9e14256:7174
+batchedUpdates$1 @ chunk-RPCDYKBN.js?v=d9e14256:18913
+batchedUpdates @ chunk-RPCDYKBN.js?v=d9e14256:3579
+dispatchEventForPluginEventSystem @ chunk-RPCDYKBN.js?v=d9e14256:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-RPCDYKBN.js?v=d9e14256:5478
+dispatchEvent @ chunk-RPCDYKBN.js?v=d9e14256:5472
+dispatchDiscreteEvent @ chunk-RPCDYKBN.js?v=d9e14256:5449Understand this error
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: test4@example.com
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+Console.js:61 Form submitted with data: {fullName: 'Tone munum', telephone: '30493049304', email: 'test4@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/4b54f6ee-3fb5-4020-b8a5-75318f0416d4', earlyBirdConfirmed: true, …}
+Console.js:61 Submitting booking: {fullName: 'Tone munum', telephone: '30493049304', email: 'test4@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/4b54f6ee-3fb5-4020-b8a5-75318f0416d4', earlyBirdConfirmed: true, …}
+Console.js:61 Submitting booking: {fullName: 'Tone munum', telephone: '30493049304', email: 'test4@example.com', receiptPath: 'https://storage.googleapis.com/replit-objstore-798…vate/uploads/4b54f6ee-3fb5-4020-b8a5-75318f0416d4', earlyBirdConfirmed: true, …}
+frame_ant.js:2 Uncaught (in promise) AbortError: The user aborted a request.
+e @ frame_ant.js:2
+s @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+Promise.then
+e @ frame_ant.js:2
+u @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+(anonymous) @ frame_ant.js:2
+s @ frame_ant.js:2
+window.fetch @ frame_ant.js:2
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.consumeQueue @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+n @ _app-e8e03ea2547d612b.js:13
+setTimeout
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+e.scheduleQueueConsumption @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+e @ _app-e8e03ea2547d612b.js:23
+t.subscribe @ _app-e8e03ea2547d612b.js:23
+e.try @ _app-e8e03ea2547d612b.js:40
+e.start @ _app-e8e03ea2547d612b.js:40
+t.request @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:40
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+e.execute @ _app-e8e03ea2547d612b.js:28
+e.getObservableFromLink @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+s @ _app-e8e03ea2547d612b.js:15
+e.mutate @ _app-e8e03ea2547d612b.js:28
+e.mutate @ _app-e8e03ea2547d612b.js:28
+(anonymous) @ _app-e8e03ea2547d612b.js:20
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ main-304de52c5211e2ee.js:1
+n @ main-304de52c5211e2ee.js:1
+u @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ main-304de52c5211e2ee.js:1
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+(anonymous) @ _app-e8e03ea2547d612b.js:15
+v @ _app-e8e03ea2547d612b.js:28
+S @ _app-e8e03ea2547d612b.js:28
+E @ _app-e8e03ea2547d612b.js:28
+n @ _app-e8e03ea2547d612b.js:13
+setTimeout
+(anonymous) @ _app-e8e03ea2547d612b.js:13
+_ @ _app-e8e03ea2547d612b.js:28
+n @ _app-e8e03ea2547d612b.js:13Understand this error

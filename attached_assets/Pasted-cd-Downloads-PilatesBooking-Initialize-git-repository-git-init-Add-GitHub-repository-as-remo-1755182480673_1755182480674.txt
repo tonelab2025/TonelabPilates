@@ -1,0 +1,115 @@
+cd ~/Downloads/PilatesBooking
+
+# Initialize git repository
+git init
+
+# Add GitHub repository as remote
+git remote add origin https://github.com/tonelab2025/PilatesBooking.git
+
+# Stage all files
+git add .
+
+# Commit with message
+git commit -m "Complete Tonelab Pilates booking platform with Google Sheets integration"
+
+# Push to GitHub
+git push -u origin main
+zsh: command not found: #
+zsh: command not found: #
+error: could not lock config file /Users/ptspl/Downloads/PilatesBooking/.git/config: File exists
+fatal: could not set 'core.repositoryformatversion' to '0'
+zsh: command not found: #
+error: could not lock config file .git/config: File exists
+fatal: could not set 'remote.origin.url' to 'https://github.com/tonelab2025/PilatesBooking.git'
+zsh: command not found: #
+zsh: command not found: #
+[main 1a208f7] Complete Tonelab Pilates booking platform with Google Sheets integration
+ Committer: Soumik <ptspl@Soumik.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 69 files changed, 421 insertions(+)
+ create mode 100644 .local/state/replit/agent/.agent_state_0b61f005ae658b433f185286302b2a8f66667fd6.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_0c1a05aead4ffa40b5852a7bae296c5a04a35132.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_1108a4078d74dfa4db000f9d4dc03690da8fce4e.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_125461a46f7be2d3de59978ab827502eda82d3a4.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_126d9e3998ab0d04517d0364818da234218f1a10.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_16d9ce1b49059187bd602103f08259ddf383e40f.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_190c6965429bba69a64330a2705ae681189565e5.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_21607ed3c370a00cbe89ab6f290193ac161245d8.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_223d1d84411a28b1afb89495f89835e709a8ab84.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_27b1d70367fa3f7a0a8cbec146d4dbf595da40d1.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_28343fcef26f080462282c1c98dd6876546ef367.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_2ab737f88ae69cac96bfd0d95a096405faf7d07f.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_2fa72e14c34fb1e650a34b7caf0261ab38b8f0f2.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_30d75d73424b31ecf63e9208fb3341b03a8aad4c.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_36a0eab76c0ef69d55ff5a77eada6b8079dfd761.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_4c1066be7905860b5f637773d4d89cdfb4be8ec5.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_50458f33883ea8e9a8ac72bca04389bcec5446d5.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_516d68945b7eb188d618f0c57ed37e19680e869f.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_5720d374a3ea1fbbb8dc004a7c80339d2511f428.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_576bd204ee193380281970c44e6188313be5b31e.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_57f3959e8c84de4e9b5f5d507f0d29b7e4d3794f.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_5f44b810663cc92874b0180f169cf6fb8648a609.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_64bd1b802ca9f47ad93c02506e3fe8b70c70bc82.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_65e5069c442350159859b71fa9d3aeab32987297.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_6aa71e41d659ff6b12da65e950cc365afba4f79f.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_6f304f5c7f1f0e14627ca5d16e4373d3e869e699.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_72ba0a9fbf35a86a46c785b27394edda6309076d.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_73b50c1aa74dca4f4699e84db620520c3b1686e2.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_84ce3b7b2b5fd5b2d85c3f0d2edaa995c3293ce5.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_85f6ac653560c58e383c4509c345fd83e1eb2cea.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_8cea20aa3e90e299a0723671fb7bc243abb363d4.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_8dd2065931661f7bfb538fa1f81e9da0ca2befe3.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_902fbffe07c17bac639b67bca9fecd88bb670688.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_919b76c498a717bf6015fac082a8e7d282811878.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_93bac9f19e6b4f6b325292e1fe9d1309a5711243.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_98ea55a8c41cb5cf45a8529519ef80480a8470f5.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_9c325ea9378cc51860179c0ccb4bf26e547a622e.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_a5cc470353c51473b25036669333ef6f633e22a2.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_a66e7aff29d8f02f13ddca3e3be83dfd0d9c5ef3.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_a98c74852f2baa664b2dfb7322dffe5735502fc0.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_af06f483007a29b17c4f8778c6361be3071d58af.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_b4bfc24521913998c972b9acc732647e17fbd484.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_b5030607010336c771866c010b7f9fcb7258818a.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_b7c175d2552d79b3a282e5f85aa4ea136e912e65.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_b89111088fed0c94329cbdfa09a21e2fbbb12fcd.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_c1017dcad31725ca87089cd7928b6e8c230a5909.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_c3594591377c35ef66d266ed06f95ae9cb55a20e.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_cb8b79bfc12ca8921d7fdb740ef29b504aead412.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_cba900374e84dbcc5072e17349ec69530fc1eeff.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_cdd505cd5bd6a229d441f726825cd2cfe10f540e.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_db2bfcd81c33262101d4cb43a18258e2cb01c941.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_dc1427eed3330e8d5ba1a258b358a61d7ca1baf4.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_e12c6da44792fefe205b0fa99b2b46b0b1f1a240.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_e3c280948d58498d43ec50e1475696123fb3fd2f.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_e8190cdf0fce682468ffde6e72c9435a4771b5c9.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_ebc5ea59c8b60f4d0cbdcd34a949324b62c33862.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_f021b01672494d7b4b7edcd9d58fa313e01544af.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_f03d3f57c4eebe43cf064dc2aef636d56ecbd290.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_f192bd8d82d1b4dcfb46e4d2b040552d9bf17008.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_f48837fd15c6ac2e081c60af411ba2d8021a86f9.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_f7c093c6697014eb4ad9e35e4211b303b99b5ea8.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_fdcfdc3a4ecc81d204d8299196421ea3a648444b.bin
+ create mode 100644 .local/state/replit/agent/.agent_state_main.bin
+ create mode 100644 .local/state/replit/agent/.latest.json
+ create mode 100644 .local/state/replit/agent/design_reference/1bda1c8d-8460-41b2-a34b-f6f61d747cd0/07d9fd19-e0a2-4d9c-846a-ad6772d3d30a.html
+ create mode 100644 .local/state/replit/agent/filesystem/filesystem_state.json
+ create mode 100644 .local/state/replit/agent/rapid_build_started
+ create mode 100644 .local/state/replit/agent/rapid_build_success
+ create mode 100644 .local/state/replit/agent/repl_state.bin
+zsh: command not found: #
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
