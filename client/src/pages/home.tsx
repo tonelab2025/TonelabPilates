@@ -569,7 +569,7 @@ export default function Home() {
                             <div className="flex flex-col items-center text-center">
                               <Upload className="text-gray-400 mb-3" size={24} />
                               <div className="mb-2">
-                                <span className="text-sm font-semibold text-black bg-gray-900 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200">
+                                <span className="text-sm font-semibold text-white bg-gray-900 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200">
                                   Choose file
                                 </span>
                               </div>
