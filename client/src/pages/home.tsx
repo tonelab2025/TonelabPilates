@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { Calendar, Clock, MapPin, Phone, EnvelopeSimple, InstagramLogo, ArrowSquareOut, Check, Upload, Sparkle, Sun, Moon } from "phosphor-react";
+import { Calendar, Clock, MapPin, Phone, EnvelopeSimple, InstagramLogo, ArrowSquareOut, Check, Upload, Sparkle, Sun, Moon, X } from "phosphor-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -526,7 +526,7 @@ export default function Home() {
                       <FormLabel className="block text-sm font-semibold text-gray-700 mb-3">
                         Please attach your online receipt to confirm our booking <span className="text-red-500">*</span>
                       </FormLabel>
-                      <p className="text-sm text-gray-600 mb-3">Upload 1 supported file. Max 100 MB.</p>
+                      <p className="text-sm text-gray-600 mb-3">Upload 1 supported file. Max 2 MB.</p>
                       
                       <div className="relative">
                         <input
@@ -535,17 +535,23 @@ export default function Home() {
                           onChange={(e) => {
                             const file = e.target.files?.[0];
                             if (file) {
-                              if (file.size > 104857600) { // 100MB limit
+                              if (file.size > 2097152) { // 2MB limit
                                 toast({
                                   title: "File too large",
-                                  description: "Please select a file smaller than 100MB.",
+                                  description: "Please select a file smaller than 2MB.",
                                   variant: "destructive",
                                 });
                                 return;
                               }
                               
+                              // Create preview URL for images
+                              let previewUrl = "";
+                              if (file.type.startsWith('image/')) {
+                                previewUrl = URL.createObjectURL(file);
+                              }
+                              
                               const fileName = `receipt-${Date.now()}-${file.name}`;
-                              setUploadedFileUrl(fileName);
+                              setUploadedFileUrl(previewUrl || fileName);
                               form.setValue("receiptPath", fileName);
                               
                               toast({
@@ -554,68 +560,112 @@ export default function Home() {
                               });
                             }
                           }}
-                          className="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-gray-800"
+                          className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                           data-testid="receipt-upload-input"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                          <div className="flex items-center text-gray-500">
-                            <Upload className="mr-2" size={16} />
-                            <span className="text-sm font-medium underline">Choose file or browse files</span>
+                        
+                        {!uploadedFileUrl && (
+                          <div className="w-full p-6 border-2 border-dashed border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                            <div className="flex flex-col items-center text-center">
+                              <Upload className="text-gray-400 mb-3" size={24} />
+                              <div className="mb-2">
+                                <span className="text-sm font-semibold text-black bg-gray-900 px-4 py-2 rounded-full hover:bg-gray-800 transition-colors duration-200">
+                                  Choose file
+                                </span>
+                              </div>
+                              <p className="text-sm text-gray-500">or drag and drop</p>
+                              <p className="text-xs text-gray-400 mt-1">PNG, JPG, PDF up to 2MB</p>
+                            </div>
                           </div>
-                        </div>
+                        )}
+                        
+                        {uploadedFileUrl && (
+                          <div className="w-full p-4 border-2 border-green-300 bg-green-50 rounded-lg">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center">
+                                <Check className="text-green-600 mr-3" size={20} />
+                                <div>
+                                  <p className="text-sm font-semibold text-green-800">File uploaded successfully</p>
+                                  <p className="text-xs text-green-600">Ready for booking submission</p>
+                                </div>
+                              </div>
+                              <Button
+                                type="button"
+                                variant="ghost"
+                                size="sm"
+                                onClick={() => {
+                                  setUploadedFileUrl("");
+                                  form.setValue("receiptPath", "");
+                                }}
+                                className="text-green-600 hover:text-green-800 hover:bg-green-100 h-auto p-2"
+                                data-testid="button-remove-file"
+                              >
+                                <X size={16} />
+                              </Button>
+                            </div>
+                          </div>
+                        )}
                       </div>
                       
-                      {uploadedFileUrl && (
+                      {uploadedFileUrl && uploadedFileUrl.startsWith('blob:') && (
                         <div className="mt-4" data-testid="file-preview">
-                          <Card className="bg-white border-gray-200">
-                            <CardContent className="p-3">
+                          <Card className="bg-white border-gray-200 shadow-sm">
+                            <CardContent className="p-4">
                               <div className="flex items-center justify-between mb-3">
                                 <div className="flex items-center">
-                                  <Check className="text-green-500 mr-3" size={16} />
-                                  <span className="text-sm text-gray-700">Receipt uploaded successfully</span>
+                                  <Check className="text-green-500 mr-3" size={18} />
+                                  <span className="text-sm font-semibold text-gray-700">Receipt Preview</span>
                                 </div>
                                 <Button
                                   type="button"
                                   variant="ghost"
                                   size="sm"
                                   onClick={() => {
+                                    // Clean up blob URL
+                                    if (uploadedFileUrl.startsWith('blob:')) {
+                                      URL.revokeObjectURL(uploadedFileUrl);
+                                    }
                                     setUploadedFileUrl("");
                                     form.setValue("receiptPath", "");
                                   }}
-                                  className="text-gray-500 hover:text-gray-700 h-auto p-1 text-xl font-bold"
-                                  data-testid="button-remove-file"
+                                  className="text-gray-400 hover:text-gray-600 h-auto p-1"
+                                  data-testid="button-remove-preview"
                                 >
-                                  ×
+                                  <X size={16} />
                                 </Button>
                               </div>
-                              <div className="mt-3">
-                                <div className="relative w-full min-h-[200px] max-h-64 bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
+                              
+                              <div className="relative w-full max-w-md mx-auto">
+                                <div className="relative bg-gray-50 rounded-lg border border-gray-200 overflow-hidden aspect-[3/4] max-h-80">
                                   <img 
                                     src={uploadedFileUrl} 
-                                    alt="Payment Receipt" 
+                                    alt="Payment Receipt Preview" 
                                     className="w-full h-full object-contain"
                                     data-testid="receipt-preview-image"
                                     onError={(e) => {
-                                      console.error('Image failed to load:', uploadedFileUrl);
-                                      // Show fallback message instead of hiding
-                                      e.currentTarget.style.display = 'none';
-                                      const fallback = e.currentTarget.parentElement?.querySelector('.fallback-message') as HTMLElement;
-                                      if (fallback) fallback.style.display = 'flex';
-                                    }}
-                                    onLoad={(e) => {
-                                      console.log('Image loaded successfully:', uploadedFileUrl);
-                                      // Hide fallback message if image loads
-                                      const fallback = (e.target as HTMLElement).parentElement?.querySelector('.fallback-message') as HTMLElement;
-                                      if (fallback) fallback.style.display = 'none';
+                                      console.error('Image preview failed to load');
+                                      const target = e.currentTarget;
+                                      target.style.display = 'none';
+                                      
+                                      // Show fallback
+                                      const container = target.parentElement;
+                                      if (container) {
+                                        container.innerHTML = `
+                                          <div class="flex items-center justify-center h-full text-gray-500">
+                                            <div class="text-center">
+                                              <div class="text-lg mb-2">📄</div>
+                                              <div class="text-sm">Preview not available</div>
+                                              <div class="text-xs text-gray-400 mt-1">File uploaded successfully</div>
+                                            </div>
+                                          </div>
+                                        `;
+                                      }
                                     }}
                                   />
-                                  <div className="fallback-message absolute inset-0 flex items-center justify-center text-gray-500 bg-gray-100" style={{ display: 'none' }}>
-                                    <div className="text-center">
-                                      <div>✅ Receipt uploaded successfully</div>
-                                      <div className="text-sm mt-2">Preview temporarily unavailable</div>
-                                    </div>
-                                  </div>
                                 </div>
+                                <p className="text-xs text-gray-500 mt-2 text-center">
+                                  Your receipt is ready for submission
+                                </p>
                               </div>
                             </CardContent>
                           </Card>

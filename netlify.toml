@@ -19,7 +19,7 @@
 # Handle API routes
 [[redirects]]
   from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
+  to = "/.netlify/functions/api-simple/:splat"
   status = 200
 
 # Environment variables that need to be set in Netlify dashboard:
