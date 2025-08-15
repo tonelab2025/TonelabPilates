@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && vite build && esbuild server/netlify.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --minify --tree-shaking=true"
+  command = "npm install && vite build"
   publish = "dist/public"
 
 [build.environment]

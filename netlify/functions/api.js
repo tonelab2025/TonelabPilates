@@ -1,3 +1,3 @@
-const { handler } = require('../../dist/netlify.js');
+const { handler } = require('./api.ts');
 
 exports.handler = handler;
