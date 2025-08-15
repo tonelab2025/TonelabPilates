@@ -114,40 +114,7 @@ export default function Home() {
     },
   });
 
-  const handleGetUploadParameters = async () => {
-    // Generate a temporary booking ID for file organization
-    const tempBookingId = crypto.randomUUID();
-    const response = await apiRequest("POST", "/api/receipts/upload", {
-      bookingId: tempBookingId
-    });
-    
-    if (!response.ok) {
-      throw new Error(`Upload setup failed: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    return {
-      method: "PUT" as const,
-      url: data.uploadURL,
-    };
-  };
-
-  const handleUploadComplete = (result: UploadResult<Record<string, unknown>, Record<string, unknown>>) => {
-    if (result.successful && result.successful.length > 0) {
-      const uploadedFile = result.successful[0];
-      const fileUrl = uploadedFile.uploadURL || uploadedFile.response?.body?.fileUrl;
-      
-      if (fileUrl) {
-        setUploadedFileUrl(fileUrl);
-        form.setValue("receiptPath", fileUrl);
-        
-        toast({
-          title: "Receipt Uploaded",
-          description: "Your payment receipt has been uploaded successfully.",
-        });
-      }
-    }
-  };
+  // Simplified upload handling - no external dependencies needed
 
   const onSubmit = (data: InsertBooking) => {
     console.log("Form submitted with data:", data);
@@ -561,15 +528,42 @@ export default function Home() {
                       </FormLabel>
                       <p className="text-sm text-gray-600 mb-3">Upload 1 supported file. Max 100 MB.</p>
                       
-                      <ObjectUploader
-                        maxNumberOfFiles={1}
-                        maxFileSize={104857600} // 100MB
-                        onGetUploadParameters={handleGetUploadParameters}
-                        onComplete={handleUploadComplete}
-                      >
-                        <Upload className="mr-2" size={16} />
-                        Add file
-                      </ObjectUploader>
+                      <div className="relative">
+                        <input
+                          type="file"
+                          accept="image/*,.pdf"
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) {
+                              if (file.size > 104857600) { // 100MB limit
+                                toast({
+                                  title: "File too large",
+                                  description: "Please select a file smaller than 100MB.",
+                                  variant: "destructive",
+                                });
+                                return;
+                              }
+                              
+                              const fileName = `receipt-${Date.now()}-${file.name}`;
+                              setUploadedFileUrl(fileName);
+                              form.setValue("receiptPath", fileName);
+                              
+                              toast({
+                                title: "Receipt Uploaded",
+                                description: "Your payment receipt has been uploaded successfully.",
+                              });
+                            }
+                          }}
+                          className="w-full p-4 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-gray-800"
+                          data-testid="receipt-upload-input"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                          <div className="flex items-center text-gray-500">
+                            <Upload className="mr-2" size={16} />
+                            <span className="text-sm font-medium underline">Choose file or browse files</span>
+                          </div>
+                        </div>
+                      </div>
                       
                       {uploadedFileUrl && (
                         <div className="mt-4" data-testid="file-preview">

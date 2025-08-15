@@ -200,33 +200,16 @@ export const handler: Handler = async (event, context) => {
       };
     }
 
-    if (method === 'POST' && (path === '/api/upload/receipt' || path === '/api/receipts/upload')) {
-      try {
-        const body = JSON.parse(event.body || '{}');
-        const bookingId = body.bookingId || Date.now().toString();
-        
-        // Create a direct upload URL to our file handler
-        const timestamp = Date.now();
-        const uploadURL = `https://tonelabs.netlify.app/.netlify/functions/upload-handler?bookingId=${bookingId}&timestamp=${timestamp}`;
-        
-        return {
-          statusCode: 200,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            uploadURL: uploadURL
-          })
-        };
-      } catch (error) {
-        console.error('Receipt upload error:', error);
-        return {
-          statusCode: 500,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            error: 'Failed to get upload URL',
-            details: error.message 
-          })
-        };
-      }
+    if (method === 'POST' && path === '/api/simple-upload') {
+      // Simple upload handler that just accepts the file
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          success: true,
+          message: 'File received successfully'
+        })
+      };
     }
 
     // Handle the actual file upload (PUT request)

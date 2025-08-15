@@ -1,0 +1,257 @@
+/api/content/public:1  Failed to load resource: the server responded with a status of 502 ()
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: d
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: do
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: dom
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: domi
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: domin
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: dominc
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 2
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 23
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 232
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 2321
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 23213
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 232133
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 2321332
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 23213323
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 232133232
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 2321332321
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: 23213323213
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: d
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: dd
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddd
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: dddd
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#h
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#ho
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hot
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotm
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.o
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.oc
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.ocm
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.oc
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.o
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.c
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.co
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd#hotmm.com
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: dddddhotmm.com
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: ddddd@hotmm.com
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+contentScript.bundle.js:4785 Event target tag: INPUT
+contentScript.bundle.js:4785 Current value: C:\fakepath\Screenshot 2025-08-12 at 5.04.42 PM.png
+contentScript.bundle.js:4785 Current shortcuts: []
+contentScript.bundle.js:4785 Data received in content script: []
+frame_ant.js:2  POST https://tonelabs.netlify.app/api/receipts/upload 502 (Bad Gateway)
+window.fetch @ frame_ant.js:2
+ni @ index-R2W20CTE.js:48
+S @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:139
+xg @ index-R2W20CTE.js:139
+run @ index-R2W20CTE.js:139
+(anonymous) @ index-R2W20CTE.js:139
+(anonymous) @ index-R2W20CTE.js:139
+bg @ index-R2W20CTE.js:141
+uploadFile @ index-R2W20CTE.js:141
+iC @ index-R2W20CTE.js:141
+start @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+uC @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+Fl @ index-R2W20CTE.js:122
+await in Fl
+(anonymous) @ index-R2W20CTE.js:122
+Promise.then
+upload @ index-R2W20CTE.js:122
+(anonymous) @ index-R2W20CTE.js:130
+(anonymous) @ index-R2W20CTE.js:117
+index-R2W20CTE.js:117 [Uppy] [12:48:09] 502: error decoding lambda response: invalid status code returned from lambda: 0
+error @ index-R2W20CTE.js:117
+log @ index-R2W20CTE.js:122
+(anonymous) @ index-R2W20CTE.js:122
+s @ index-R2W20CTE.js:117
+t.emit @ index-R2W20CTE.js:117
+emit @ index-R2W20CTE.js:117
+o @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+Promise.then
+iC @ index-R2W20CTE.js:141
+start @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+uC @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+Fl @ index-R2W20CTE.js:122
+await in Fl
+(anonymous) @ index-R2W20CTE.js:122
+Promise.then
+upload @ index-R2W20CTE.js:122
+(anonymous) @ index-R2W20CTE.js:130
+(anonymous) @ index-R2W20CTE.js:117
+frame_ant.js:2  POST https://tonelabs.netlify.app/api/receipts/upload 502 (Bad Gateway)
+window.fetch @ frame_ant.js:2
+ni @ index-R2W20CTE.js:48
+S @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:139
+xg @ index-R2W20CTE.js:139
+run @ index-R2W20CTE.js:139
+(anonymous) @ index-R2W20CTE.js:139
+(anonymous) @ index-R2W20CTE.js:139
+bg @ index-R2W20CTE.js:141
+uploadFile @ index-R2W20CTE.js:141
+iC @ index-R2W20CTE.js:141
+start @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+uC @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+Fl @ index-R2W20CTE.js:122
+await in Fl
+ig @ index-R2W20CTE.js:122
+retryAll @ index-R2W20CTE.js:121
+onClick @ index-R2W20CTE.js:128
+(anonymous) @ index-R2W20CTE.js:117
+index-R2W20CTE.js:117 [Uppy] [12:49:00] 502: error decoding lambda response: invalid status code returned from lambda: 0
+error @ index-R2W20CTE.js:117
+log @ index-R2W20CTE.js:122
+(anonymous) @ index-R2W20CTE.js:122
+s @ index-R2W20CTE.js:117
+t.emit @ index-R2W20CTE.js:117
+emit @ index-R2W20CTE.js:117
+o @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+Promise.then
+iC @ index-R2W20CTE.js:141
+start @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+uC @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+(anonymous) @ index-R2W20CTE.js:141
+Fl @ index-R2W20CTE.js:122
+await in Fl
+ig @ index-R2W20CTE.js:122
+retryAll @ index-R2W20CTE.js:121
+onClick @ index-R2W20CTE.js:128
+(anonymous) @ index-R2W20CTE.js:117
