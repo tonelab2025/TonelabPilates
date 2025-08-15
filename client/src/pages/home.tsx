@@ -113,23 +113,37 @@ export default function Home() {
         console.log('Serverless function failed, using direct Web3Forms:', error);
       }
       
-      // Fallback: Direct Web3Forms submission
+      // Fallback: Direct Web3Forms submission with Google Sheets data
+      const bookingId = `BOOK-${Date.now()}`;
+      const timestamp = new Date().toLocaleString();
+      
       const emailData = {
         access_key: '9f4058e1-70c7-48b0-ba8d-8d52c5339371',
-        subject: `New Tonelab Booking: ${data.fullName}`,
+        subject: `🔥 NEW BOOKING: ${data.fullName} - ID: ${bookingId}`,
         from_name: 'Tonelab Booking System',
         email: 'collective.tonelab@gmail.com',
-        message: `NEW BOOKING RECEIVED:
-        
+        message: `🎯 NEW TONELAB BOOKING RECEIVED
+
+📋 BOOKING DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Booking ID: ${bookingId}
+Date/Time: ${timestamp}
 Customer: ${data.fullName}
 Email: ${data.email}
 Phone: ${data.telephone}
-Early Bird: ${data.earlyBirdConfirmed ? 'Yes' : 'No'}
-Receipt: ${data.receiptPath ? 'Uploaded' : 'Not provided'}
-Policy Accepted: ${data.cancellationPolicyAccepted ? 'Yes' : 'No'}
-Booking Time: ${new Date().toLocaleString()}
+Early Bird: ${data.earlyBirdConfirmed ? '✅ Yes' : '❌ No'}
+Receipt: ${data.receiptPath ? '✅ Uploaded' : '❌ Not provided'}
+Policy: ${data.cancellationPolicyAccepted ? '✅ Accepted' : '❌ Not accepted'}
 
-This booking was submitted directly via the website.`
+📊 GOOGLE SHEETS DATA (COPY TO SPREADSHEET):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${bookingId}    ${timestamp}    ${data.fullName}        ${data.email}   ${data.telephone}       ${data.receiptPath || ''}       ${data.earlyBirdConfirmed ? 'Yes' : 'No'}       ${data.cancellationPolicyAccepted ? 'Yes' : 'No'}
+
+🔗 Google Sheets: https://docs.google.com/spreadsheets/d/1XNcktdtttVYDnXwCHg_4te51ym60V9XBovU8j_Bo55w/edit
+
+⚠️ IMPORTANT: Copy the data row above into the Google Sheets manually until the serverless function is fixed.
+
+Status: Direct submission (serverless function bypassed)`
       };
       
       const directResponse = await fetch('https://api.web3forms.com/submit', {
