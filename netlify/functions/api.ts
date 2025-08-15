@@ -6,6 +6,19 @@ import { config } from "dotenv";
 config();
 
 const app = express();
+
+// Add CORS middleware FIRST
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -142,7 +155,39 @@ app.get("/api/admin/stats", (req, res) => {
   });
 });
 
+// Add a catch-all route to help debug routing issues
+app.get('*', (req, res) => {
+  if (req.path.startsWith('/api/')) {
+    res.status(404).json({ 
+      error: 'API endpoint not found', 
+      path: req.path,
+      availableEndpoints: [
+        'GET /api/content/public',
+        'POST /api/bookings',
+        'GET /api/bookings',
+        'DELETE /api/bookings/:id',
+        'PUT /api/content/:id',
+        'POST /api/admin/login',
+        'POST /api/upload/receipt',
+        'GET /api/upload/config',
+        'GET /api/admin/stats'
+      ]
+    });
+  } else {
+    res.status(404).json({ error: 'Not found' });
+  }
+});
+
 export const handler: Handler = async (event, context) => {
-  const serverless = await import("@netlify/functions");
-  return serverless.default(app)(event, context);
+  try {
+    const serverless = await import("@netlify/functions");
+    return await serverless.default(app)(event, context);
+  } catch (error) {
+    console.error('Handler error:', error);
+    return {
+      statusCode: 500,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ error: 'Internal server error', details: error.message })
+    };
+  }
 };
