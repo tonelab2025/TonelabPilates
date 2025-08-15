@@ -1,6 +1,6 @@
 [build]
-  command = "npm install && vite build && cp _redirects dist/_redirects"
-  publish = "dist"
+  command = "npm install && vite build && cp _redirects dist/public/_redirects"
+  publish = "dist/public"
 
 [build.environment]
   NODE_VERSION = "20"
