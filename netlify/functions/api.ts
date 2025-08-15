@@ -201,24 +201,34 @@ export const handler: Handler = async (event, context) => {
     }
 
     if (method === 'POST' && (path === '/api/upload/receipt' || path === '/api/receipts/upload')) {
-      // Handle both URL patterns for receipt upload
-      const body = JSON.parse(event.body || '{}');
-      const bookingId = body.bookingId || Date.now().toString();
-      
-      // For Netlify deployment, we'll simulate the upload process
-      // Return a simulated upload URL that will work with the frontend
-      const uploadURL = `/.netlify/functions/api/upload/file/${bookingId}`;
-      
-      return {
-        statusCode: 200,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          success: true, 
-          uploadURL: uploadURL,
-          fileUrl: `https://tonelabs.netlify.app/uploads/receipt-${bookingId}-${Date.now()}.jpg`,
-          message: "Upload URL generated successfully" 
-        })
-      };
+      try {
+        // Handle both URL patterns for receipt upload
+        const body = JSON.parse(event.body || '{}');
+        const bookingId = body.bookingId || Date.now().toString();
+        
+        // For Netlify deployment, create a mock upload URL that simulates the expected format
+        // This mimics what the ObjectStorageService would return
+        const timestamp = Date.now();
+        const uploadURL = `https://tonelabs.netlify.app/.netlify/functions/upload-handler?bookingId=${bookingId}&timestamp=${timestamp}`;
+        
+        return {
+          statusCode: 200,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            uploadURL: uploadURL
+          })
+        };
+      } catch (error) {
+        console.error('Receipt upload error:', error);
+        return {
+          statusCode: 500,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ 
+            error: 'Failed to get upload URL',
+            details: error.message 
+          })
+        };
+      }
     }
 
     // Handle the actual file upload (PUT request)
