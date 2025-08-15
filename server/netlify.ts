@@ -1,20 +1,25 @@
-import { createServer } from "./index";
+import express from "express";
 import { Handler } from "@netlify/functions";
+import { registerRoutes } from "./routes";
 
-let serverInstance: any = null;
+let app: express.Application | null = null;
+
+async function initApp() {
+  if (app) return app;
+  
+  app = express();
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: false }));
+  
+  await registerRoutes(app);
+  return app;
+}
 
 export const handler: Handler = async (event, context) => {
   try {
-    // Initialize server if not already done
-    if (!serverInstance) {
-      serverInstance = await createServer();
-    }
-
-    // Use serverless-http to handle the request
-    const serverlessHttp = (await import("@netlify/functions")).default;
-    const netlifyHandler = serverlessHttp(serverInstance);
-    
-    return await netlifyHandler(event, context);
+    const appInstance = await initApp();
+    const serverless = (await import("@netlify/functions")).default;
+    return await serverless(appInstance)(event, context);
   } catch (error) {
     console.error('Netlify function error:', error);
     return {
