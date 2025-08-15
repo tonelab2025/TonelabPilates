@@ -120,6 +120,11 @@ export default function Home() {
     const response = await apiRequest("POST", "/api/receipts/upload", {
       bookingId: tempBookingId
     });
+    
+    if (!response.ok) {
+      throw new Error(`Upload setup failed: ${response.status}`);
+    }
+    
     const data = await response.json();
     return {
       method: "PUT" as const,
@@ -130,15 +135,11 @@ export default function Home() {
   const handleUploadComplete = (result: UploadResult<Record<string, unknown>, Record<string, unknown>>) => {
     if (result.successful && result.successful.length > 0) {
       const uploadedFile = result.successful[0];
-      const fileUrl = uploadedFile.uploadURL;
+      const fileUrl = uploadedFile.uploadURL || uploadedFile.response?.body?.fileUrl;
+      
       if (fileUrl) {
-        // Convert GCS URL to our proxy endpoint for proper image preview
-        const proxyUrl = fileUrl.includes('storage.googleapis.com') 
-          ? `/api/receipt-preview?url=${encodeURIComponent(fileUrl)}`
-          : fileUrl;
-        
-        setUploadedFileUrl(proxyUrl);
-        form.setValue("receiptPath", fileUrl); // Store original URL for backend
+        setUploadedFileUrl(fileUrl);
+        form.setValue("receiptPath", fileUrl);
         
         toast({
           title: "Receipt Uploaded",

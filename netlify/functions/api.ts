@@ -202,12 +202,10 @@ export const handler: Handler = async (event, context) => {
 
     if (method === 'POST' && (path === '/api/upload/receipt' || path === '/api/receipts/upload')) {
       try {
-        // Handle both URL patterns for receipt upload
         const body = JSON.parse(event.body || '{}');
         const bookingId = body.bookingId || Date.now().toString();
         
-        // For Netlify deployment, create a mock upload URL that simulates the expected format
-        // This mimics what the ObjectStorageService would return
+        // Create a direct upload URL to our file handler
         const timestamp = Date.now();
         const uploadURL = `https://tonelabs.netlify.app/.netlify/functions/upload-handler?bookingId=${bookingId}&timestamp=${timestamp}`;
         
@@ -256,6 +254,16 @@ export const handler: Handler = async (event, context) => {
           allowedTypes: ['image/jpeg', 'image/png', 'image/jpg'],
           uploadEndpoint: '/api/upload/receipt'
         })
+      };
+    }
+
+    if (method === 'GET' && path.startsWith('/api/placeholder-receipt')) {
+      // Return a simple placeholder response for receipt preview
+      const { filename } = event.queryStringParameters || {};
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'text/plain' },
+        body: `Receipt uploaded: ${filename || 'receipt.jpg'}`
       };
     }
 
