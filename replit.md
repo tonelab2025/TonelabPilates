@@ -55,7 +55,7 @@ The architecture follows a monorepo pattern with shared types and schemas, enabl
 - **Enhanced Error Handling**: Comprehensive logging and fallback systems for Google Services integration
 - **User Testing Confirmed**: Multiple successful test bookings with receipt file uploads and Google Sheets synchronization verified
 - **File Organization Implemented**: Receipt files now organized in day-wise folders with booking ID references (uploads/YYYY-MM-DD/bookingId_timestamp)
-- **Deployment Ready**: Code pushed to GitHub repository https://github.com/tonelab2025/PilatesBooking.git, ready for Netlify deployment (August 14, 2025)
+- **Deployment Ready**: Code pushed to GitHub repository https://github.com/tonelab2025/PilatesBooking.git, successfully deployed to Netlify at https://tonelabs.netlify.app (August 15, 2025)
 - **Form Validation Enhanced**: Real-time validation with red error indicators and comprehensive input checking for names, emails, phone numbers
 - **Email Notifications Active**: Free unlimited email alerts to collective.tonelab@gmail.com using Web3Forms service (access key: 9f4058e1-70c7-48b0-ba8d-8d52c5339371) for every booking - CONFIRMED WORKING (August 15, 2025)
 - **Receipt Preview Fixed**: Image preview now works through secure proxy endpoint with Google Cloud Storage authentication - CONFIRMED WORKING
@@ -64,6 +64,9 @@ The architecture follows a monorepo pattern with shared types and schemas, enabl
 - **Delete Functionality Fixed**: Dashboard refresh issues resolved with proper query key invalidation - deletes now refresh immediately (August 15, 2025)
 - **Content Manager Improved**: Google Maps URL field added and positioned after venue fields for logical organization of location settings
 - **Location Management Complete**: Staff can independently edit Venue Name, Venue Address, and Google Maps URL through Content Manager
+- **Netlify Deployment Live**: System successfully deployed to https://tonelabs.netlify.app with working serverless functions
+- **Receipt Upload Fixed**: Added support for both /api/receipts/upload and /api/upload/receipt endpoints to handle file uploads properly on Netlify
+- **Build Configuration Optimized**: Fixed publish directory from dist to dist/public to match Vite build output structure
 - **Netlify Deployment Optimized**: Server code refactored for proper serverless function support, build process generates both index.js and netlify.js (August 15, 2025)
 - **Production-Ready Build**: 794KB optimized frontend bundle, 54KB serverless backend, zero build errors - ready for immediate deployment
 - **Netlify Deploy SUCCESS**: Site live at https://tonelabs.netlify.app/ with minimal 5KB serverless function, email notifications operational (August 15, 2025)

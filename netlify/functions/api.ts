@@ -200,15 +200,39 @@ export const handler: Handler = async (event, context) => {
       };
     }
 
-    if (method === 'POST' && path === '/api/upload/receipt') {
-      const mockFileUrl = `https://tonelabs.netlify.app/uploads/receipt-${Date.now()}.jpg`;
+    if (method === 'POST' && (path === '/api/upload/receipt' || path === '/api/receipts/upload')) {
+      // Handle both URL patterns for receipt upload
+      const body = JSON.parse(event.body || '{}');
+      const bookingId = body.bookingId || Date.now().toString();
+      
+      // For Netlify deployment, we'll simulate the upload process
+      // Return a simulated upload URL that will work with the frontend
+      const uploadURL = `/.netlify/functions/api/upload/file/${bookingId}`;
+      
+      return {
+        statusCode: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          success: true, 
+          uploadURL: uploadURL,
+          fileUrl: `https://tonelabs.netlify.app/uploads/receipt-${bookingId}-${Date.now()}.jpg`,
+          message: "Upload URL generated successfully" 
+        })
+      };
+    }
+
+    // Handle the actual file upload (PUT request)
+    if (method === 'PUT' && path.startsWith('/api/upload/file/')) {
+      const fileId = path.split('/').pop();
+      const mockFileUrl = `https://tonelabs.netlify.app/uploads/receipt-${fileId}-${Date.now()}.jpg`;
+      
       return {
         statusCode: 200,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           success: true, 
           fileUrl: mockFileUrl,
-          message: "Receipt uploaded successfully" 
+          message: "File uploaded successfully" 
         })
       };
     }
