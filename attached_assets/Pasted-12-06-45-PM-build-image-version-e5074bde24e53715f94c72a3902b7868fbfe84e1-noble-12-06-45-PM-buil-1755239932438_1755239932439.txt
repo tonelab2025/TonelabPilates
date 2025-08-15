@@ -1,0 +1,220 @@
+12:06:45 PM: build-image version: e5074bde24e53715f94c72a3902b7868fbfe84e1 (noble)
+12:06:45 PM: buildbot version: e5074bde24e53715f94c72a3902b7868fbfe84e1
+12:06:45 PM: Fetching cached dependencies
+12:06:45 PM: Starting to download cache of 377.2MB (Last modified: 2025-08-15 06:28:47 +0000 UTC)
+12:06:46 PM: Finished downloading cache in 656ms
+12:06:46 PM: Starting to extract cache
+12:06:50 PM: Finished extracting cache in 3.718s
+12:06:50 PM: Finished fetching cache in 4.429s
+12:06:50 PM: Starting to prepare the repo for build
+12:06:50 PM: Preparing Git Reference refs/heads/main
+12:06:51 PM: Custom publish path detected. Proceeding with the specified path: 'dist'
+12:06:51 PM: Custom build command detected. Proceeding with the specified command: 'npm install && vite build'
+12:06:51 PM: Starting to install dependencies
+12:06:51 PM: Started restoring cached python cache
+12:06:52 PM: Finished restoring cached python cache
+12:06:52 PM: Started restoring cached ruby cache
+12:06:52 PM: Finished restoring cached ruby cache
+12:06:52 PM: Started restoring cached go cache
+12:06:53 PM: Finished restoring cached go cache
+12:06:54 PM: Started restoring cached Node.js version
+12:06:54 PM: Finished restoring cached Node.js version
+12:06:55 PM: v20.19.4 is already installed.
+12:06:55 PM: Now using node v20.19.4 (npm v10.8.2)
+12:06:55 PM: Enabling Node.js Corepack
+12:06:55 PM: Started restoring cached build plugins
+12:06:55 PM: Finished restoring cached build plugins
+12:06:55 PM: Started restoring cached corepack dependencies
+12:06:55 PM: Finished restoring cached corepack dependencies
+12:06:55 PM: No npm workspaces detected
+12:06:55 PM: Started restoring cached node modules
+12:06:55 PM: Finished restoring cached node modules
+12:06:55 PM: Installing npm packages using npm version 10.8.2
+12:06:55 PM: npm warn config production Use `--omit=dev` instead.
+12:06:58 PM: up to date, audited 1358 packages in 3s
+12:06:58 PM: 155 packages are looking for funding
+12:06:58 PM:   run `npm fund` for details
+12:06:58 PM: 21 vulnerabilities (3 low, 12 moderate, 6 high)
+12:06:58 PM: To address issues that do not require attention, run:
+12:06:58 PM:   npm audit fix
+12:06:58 PM: To address all issues (including breaking changes), run:
+12:06:58 PM:   npm audit fix --force
+12:06:58 PM: Run `npm audit` for details.
+12:06:58 PM: npm packages installed
+12:06:59 PM: Successfully installed dependencies
+12:06:59 PM: Starting build script
+12:07:00 PM: Detected 1 framework(s)
+12:07:00 PM: "vite" at version "5.4.19"
+12:07:00 PM: Section completed: initializing
+12:07:01 PM: ​
+12:07:01 PM: Netlify Build                                                 
+12:07:01 PM: ────────────────────────────────────────────────────────────────
+12:07:01 PM: ​
+12:07:01 PM: ❯ Version
+12:07:01 PM:   @netlify/build 35.0.7
+12:07:01 PM: ​
+12:07:01 PM: ❯ Flags
+12:07:01 PM:   accountId: 689de1b5900f62329befc4a8
+12:07:01 PM:   baseRelDir: true
+12:07:01 PM:   buildId: 689ed57c7d737e0008386f45
+12:07:01 PM:   deployId: 689ed57c7d737e0008386f47
+12:07:01 PM: ​
+12:07:01 PM: ❯ Current directory
+12:07:01 PM:   /opt/build/repo
+12:07:01 PM: ​
+12:07:01 PM: ❯ Config file
+12:07:01 PM:   /opt/build/repo/netlify.toml
+12:07:01 PM: ​
+12:07:01 PM: ❯ Context
+12:07:01 PM:   production
+12:07:01 PM: ​
+12:07:01 PM: build.command from netlify.toml                               
+12:07:01 PM: ────────────────────────────────────────────────────────────────
+12:07:01 PM: ​
+12:07:01 PM: $ npm install && vite build
+12:07:03 PM: up to date, audited 1358 packages in 2s
+12:07:03 PM: 155 packages are looking for funding
+12:07:03 PM:   run `npm fund` for details
+12:07:03 PM: 21 vulnerabilities (3 low, 12 moderate, 6 high)
+12:07:03 PM: To address issues that do not require attention, run:
+12:07:03 PM:   npm audit fix
+12:07:03 PM: To address all issues (including breaking changes), run:
+12:07:03 PM:   npm audit fix --force
+12:07:03 PM: Run `npm audit` for details.
+12:07:03 PM: vite v5.4.19 building for production...
+12:07:03 PM: transforming...
+12:07:08 PM: ✓ 3398 modules transformed.
+12:07:09 PM: rendering chunks...
+12:07:09 PM: computing gzip size...
+12:07:09 PM: ../dist/public/index.html                     1.14 kB │ gzip:   0.61 kB
+12:07:09 PM: ../dist/public/assets/qr-code-BMErS_5M.png  227.94 kB
+12:07:09 PM: ../dist/public/assets/index-BkBIxM1f.css    131.93 kB │ gzip:  21.76 kB
+12:07:09 PM: ../dist/public/assets/index-DRW7pJki.js     794.09 kB │ gzip: 230.51 kB
+12:07:09 PM: 
+12:07:09 PM: (!) Some chunks are larger than 500 kB after minification. Consider:
+12:07:09 PM: - Using dynamic import() to code-split the application
+12:07:09 PM: - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+12:07:09 PM: - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+12:07:09 PM: ✓ built in 5.84s
+12:07:09 PM: ​
+12:07:09 PM: (build.command completed in 7.7s)
+12:07:09 PM: ​
+12:07:09 PM: Functions bundling                                            
+12:07:09 PM: ────────────────────────────────────────────────────────────────
+12:07:09 PM: ​
+12:07:09 PM: Packaging Functions from netlify/functions directory:
+12:07:09 PM:  - api.js
+12:07:09 PM:  - bookings.ts
+12:07:09 PM:  - login.ts
+12:07:09 PM:  - server.ts
+12:07:09 PM: ​
+12:07:09 PM: ▲ [WARNING] The CommonJS "module" variable is treated as a global variable in an ECMAScript module and may not work as expected [commonjs-variable-in-esm]
+12:07:09 PM:     netlify/functions/api.js:3:0:
+12:07:09 PM:       3 │ module.exports = { handler: () => ({ statusCode: 404, body: 'Use ap...
+        ╵ ~~~~~~
+12:07:09 PM:   This file is considered to be an ECMAScript module because the enclosing "package.json" file sets the type of this file to "module":
+12:07:09 PM:     package.json:4:10:
+12:07:09 PM:       4 │   "type": "module",
+12:07:09 PM:         ╵           ~~~~~~~~
+12:07:09 PM:   Node's package format requires that CommonJS files in a "type": "module" package use the ".cjs" file extension.
+12:07:09 PM: ▲ [WARNING] "@babel/preset-env" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:09 PM:     node_modules/netlify-lambda/lib/build.js:95:24:
+12:07:09 PM:       95 │         require.resolve('@babel/preset-env'),
+12:07:09 PM:          ╵                         ~~~~~~~~~~~~~~~~~~~
+12:07:09 PM: ▲ [WARNING] "@babel/plugin-proposal-class-properties" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:09 PM:     node_modules/netlify-lambda/lib/build.js:101:22:
+12:07:09 PM:       101 │       require.resolve('@babel/plugin-proposal-class-properties'),
+12:07:09 PM:           ╵                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12:07:09 PM: ▲ [WARNING] "@babel/plugin-transform-object-assign" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:09 PM:     node_modules/netlify-lambda/lib/build.js:102:22:
+12:07:09 PM:       102 │       require.resolve('@babel/plugin-transform-object-assign'),
+12:07:09 PM:           ╵                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12:07:09 PM: ▲ [WARNING] "@babel/plugin-proposal-object-rest-spread" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:09 PM:     node_modules/netlify-lambda/lib/build.js:103:22:
+12:07:09 PM:       103 │       require.resolve('@babel/plugin-proposal-object-rest-spread'),
+12:07:09 PM:           ╵                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12:07:10 PM: ▲ [WARNING] "babel-loader" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:10 PM:     node_modules/netlify-lambda/lib/build.js:151:36:
+12:07:10 PM:       151 │             loader: require.resolve('babel-loader'),
+12:07:10 PM:           ╵                                     ~~~~~~~~~~~~~~
+12:07:13 PM: ▲ [WARNING] "../../buildin/system" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:13 PM:     node_modules/webpack/lib/dependencies/SystemPlugin.js:72:23:
+12:07:13 PM:       72 │               require.resolve("../../buildin/system")
+12:07:13 PM:          ╵                               ~~~~~~~~~~~~~~~~~~~~~~
+12:07:13 PM: ▲ [WARNING] "node-libs-browser/mock/empty" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:13 PM:     node_modules/webpack/lib/node/NodeSourcePlugin.js:32:27:
+12:07:13 PM:       32 │         return require.resolve("node-libs-browser/mock/empty");
+12:07:13 PM:          ╵                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12:07:13 PM: ▲ [WARNING] "../../buildin/global" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:13 PM:     node_modules/webpack/lib/node/NodeSourcePlugin.js:74:25:
+12:07:13 PM:       74 │                   require.resolve("../../buildin/global")
+12:07:13 PM:          ╵                                   ~~~~~~~~~~~~~~~~~~~~~~
+12:07:13 PM: ▲ [WARNING] "assert/" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:13 PM:     node_modules/node-libs-browser/index.js:1:38:
+12:07:13 PM:       1 │ exports.assert            = require.resolve('assert/');
+12:07:13 PM:         ╵                                             ~~~~~~~~~
+12:07:13 PM: ▲ [WARNING] "buffer/" should be marked as external for use with "require.resolve" [require-resolve-not-external]
+12:07:13 PM:     node_modules/node-libs-browser/index.js:2:38:
+12:07:13 PM:       2 │ exports.buffer            = require.resolve('buffer/');
+12:07:13 PM:         ╵                                             ~~~~~~~~~
+12:07:13 PM: 10 of 37 warnings shown (disable the message limit with --log-limit=0)
+12:07:13 PM: ​
+12:07:13 PM: ❯ Functions bundled with warnings:
+12:07:13 PM:    - api.zip
+12:07:13 PM:    - server.zip
+12:07:13 PM: ​
+12:07:13 PM: (Functions bundling completed in 4.5s)
+12:07:13 PM: ​
+12:07:13 PM: Deploy site                                                   
+12:07:13 PM: ────────────────────────────────────────────────────────────────
+12:07:13 PM: ​
+12:07:13 PM: Starting to deploy site from 'dist'
+12:07:13 PM: Calculating files to upload
+12:07:14 PM: 3 new file(s) to upload
+12:07:14 PM: 2 new function(s) to upload
+12:07:20 PM: Section completed: deploying
+12:07:20 PM: Site deploy was successfully initiated
+12:07:20 PM: ​
+12:07:20 PM: (Deploy site completed in 7s)
+12:07:20 PM: ​
+12:07:20 PM: A "_redirects" file is present in the repository but is missing in the publish directory "dist".
+12:07:20 PM: ​
+12:07:20 PM: Netlify Build Complete                                        
+12:07:20 PM: ────────────────────────────────────────────────────────────────
+12:07:20 PM: ​
+12:07:20 PM: (Netlify Build completed in 19.5s)
+12:07:21 PM: Starting post processing
+12:07:21 PM: Post processing done
+12:07:21 PM: Section completed: postprocessing
+12:07:21 PM: Skipping form detection
+12:07:21 PM: Post processing - header rules
+12:07:21 PM: Post processing - redirect rules
+12:07:21 PM: Site is live ✨
+12:07:21 PM: Caching artifacts
+12:07:21 PM: Started saving node modules
+12:07:21 PM: Finished saving node modules
+12:07:21 PM: Started saving build plugins
+12:07:21 PM: Finished saving build plugins
+12:07:21 PM: Started saving bun cache
+12:07:21 PM: Finished saving bun cache
+12:07:21 PM: Started saving go cache
+12:07:21 PM: Finished saving go cache
+12:07:21 PM: Started saving python cache
+12:07:21 PM: Finished saving python cache
+12:07:21 PM: Started saving ruby cache
+12:07:21 PM: Finished saving ruby cache
+12:07:21 PM: Started saving corepack cache
+12:07:21 PM: Finished saving corepack cache
+12:07:21 PM: Started saving emacs cask dependencies
+12:07:21 PM: Finished saving emacs cask dependencies
+12:07:21 PM: Started saving maven dependencies
+12:07:21 PM: Finished saving maven dependencies
+12:07:21 PM: Started saving boot dependencies
+12:07:21 PM: Finished saving boot dependencies
+12:07:21 PM: Started saving rust rustup cache
+12:07:21 PM: Finished saving rust rustup cache
+12:07:21 PM: Build script success
+12:07:21 PM: Section completed: building
+12:08:07 PM: Uploading Cache of size 377.9MB
+12:08:08 PM: Section completed: cleanup
+12:08:08 PM: Finished processing build request in 1m22.652s

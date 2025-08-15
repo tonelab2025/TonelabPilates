@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && vite build"
+  command = "npm install && vite build && cp _redirects dist/_redirects"
   publish = "dist"
 
 [build.environment]
