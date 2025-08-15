@@ -1,3 +1,2 @@
-const { handler } = require('./api.ts');
-
-exports.handler = handler;
+// Import the handler from the TypeScript file
+exports.handler = require('./api.ts').handler;

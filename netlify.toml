@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && vite build"
+  command = "npm install && vite build && node build-functions.js"
   publish = "dist/public"
 
 [build.environment]
@@ -8,6 +8,7 @@
 
 [functions]
   directory = "netlify/functions"
+  node_bundler = "esbuild"
 
 # Redirect all routes to index.html for SPA routing
 [[redirects]]
